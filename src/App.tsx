@@ -1,14 +1,16 @@
 import ListGroup from "./components/ListGroup";
 
-let items = [
-  'Apples',
-  'Bananas',
-  'Grapes'
-];
-
 function App(){
+  let items = [
+    'Apples',
+    'Bananas',
+    'Grapes'
+  ];
+
+  const handleSelectItem = (item: string) => {console.log(item);}
+
   return <div>
-    <ListGroup items = {items} heading= "Fruits"/>
+    <ListGroup items = {items} heading= "Fruits" onSelectItem={handleSelectItem}/>
     </div>
 }
 
